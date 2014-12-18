@@ -131,10 +131,10 @@ gulp.task('jst', function() {
     // Concatenate all files together and insert a comma before each newLine
     .pipe(concat('jst.js', { newLine: ',\n' }))
 
-    // Insert the start of an `IIFE` and variable declarations at the beginning of the file
+    // Insert the start of an IIFE and variable declarations at the beginning of the file
     .pipe(insert.prepend('var mySuperDuperApp = (function(app) {\n  app.templates = app.templates || {};\n\n'))
 
-    // Insert the end of an `IIFE` and return the object at the end of the file (also the last function from the jst call will not end with a semicolon, so add one here)
+    // Insert the end of an IIFE and return the object at the end of the file (also the last function from the jst call will not end with a semicolon, so add one here)
     .pipe(insert.append(';\n\n  return app;\n})(mySuperDuperApp || {});\n'))
 
     // Uglify the JS
