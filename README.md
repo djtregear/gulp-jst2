@@ -23,7 +23,7 @@ Options
 
 `useFilePath` array containing [`RegEx`, `string`] to return all or part of the current file's path. Default returns filename without extension. Default: `['^.*/(.+?)(\.[^.]*$|$)', '$1']`
 
-`gulp-jst2` also accepts the same [ _.template]](http://lodash.com/docs#template) options and passes them on to the [lodash](http://lodash.com/) library.
+`gulp-jst2` also accepts the same [a _.template]](http://lodash.com/docs#template) options and passes them on to the [lodash](http://lodash.com/) library.
 
 
 Usage
