@@ -1,0 +1,26 @@
+{
+  "name": "gulp-jst2",
+  "version": "0.0.1",
+  "description": "Compile underscore templates to a JST file using gulp and allow customisation of the prepended text using a RegEx of the file.path.",
+  "main": "index.js",
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "keywords": [
+    "gulpplugin",
+    "jst",
+    "lodash",
+    "template",
+    "underscore",
+    "file",
+    "filename"
+  ],
+  "author": "David Tregear",
+  "license": "MIT",
+
+  "dependencies": {
+    "lodash": "~2.4.1",
+    "through2": "~0.4.1",
+    "gulp-util": "~2.2.12"
+  }
+}
