@@ -21,9 +21,9 @@ Options
 
 `prepend` string to prepend before the function returned.  Will be used in `printf` so can include `%s` to insert the string returned from the `useFilePath` option. Default: `false`.
 
-`useFilePath` array containing [`RegEx`, `string`] to return the all or part of the current file's path. Default returns filename without extension. Default: `['^.*/(.+?)(\.[^.]*$|$)', '$1']`
+`useFilePath` array containing [`RegEx`, `string`] to return all or part of the current file's path. Default returns filename without extension. Default: `['^.*/(.+?)(\.[^.]*$|$)', '$1']`
 
-`gulp-jst2` also accepts the same [_.template]](http://lodash.com/docs#template) options and passes them on to the [lodash](http://lodash.com/) library.
+`gulp-jst2` also accepts the same [ _.template]](http://lodash.com/docs#template) options and passes them on to the [lodash](http://lodash.com/) library.
 
 
 Usage
