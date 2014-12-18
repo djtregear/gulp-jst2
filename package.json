@@ -6,6 +6,10 @@
   "engines": {
     "node": ">=0.10.0"
   },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/djtregear/gulp-jst2.git"
+  },
   "keywords": [
     "gulpplugin",
     "jst",
