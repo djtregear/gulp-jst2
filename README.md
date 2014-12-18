@@ -95,6 +95,7 @@ Really Useful Usage
 Create a single javaScript file containing a `custom global object` with a key `templates` whose subkeys are the `filename` of templates from a single directory and their values are the templates.  Also minify the HTML and uglify the javaScript, like so:
 
 ```js
+
 var gulp    = require('gulp'),
     htmlmin = require('gulp-htmlmin'),
     jst     = require('gulp-jst2'),
@@ -104,6 +105,7 @@ var gulp    = require('gulp'),
 
 
 gulp.task('jst', function() {
+
   gulp.src(['./templates/*.ejs'])
 
     // Minify the HTML prior to converting to JST
@@ -125,7 +127,10 @@ gulp.task('jst', function() {
     .pipe(uglify( { mangle: true, reserved: "mySuperDuperApp" } ))
 
     .pipe(gulp.dest('./views/public/j'));
+    
 });
 
+
 gulp.task('default', ['jst']);
+
 ```
