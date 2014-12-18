@@ -34,11 +34,15 @@ Defaults will simply return the lodash function:
 var gulp = require('gulp'),
     jst  = require('gulp-jst2');
 
+
 gulp.task('jst', function() {
+
     gulp.src('input/*.ejs')
         .pipe(jst())
         .pipe(gulp.dest('./output'));
+
 });
+
 
 gulp.task('default', ['jst']);
 ```
@@ -48,11 +52,15 @@ You can `prepend` a simple string before the function to produce a variable assi
 var gulp = require('gulp'),
     jst  = require('gulp-jst2');
 
+
 gulp.task('jst', function() {
+
     gulp.src('input/*.ejs')
         .pipe(jst({ prepend: 'var mySuperDuperApp["template"] = ' }))
         .pipe(gulp.dest('./output'));
+
 });
+
 
 gulp.task('default', ['jst']);
 ```
@@ -62,11 +70,14 @@ You can `prepend` with the `%s` option to include the default filename of the cu
 var gulp = require('gulp'),
     jst  = require('gulp-jst2');
 
+
 gulp.task('jst', function() {
+
     gulp.src('input/*.ejs')
         .pipe(jst({ prepend: 'var mySuperDuperApp["templates"]["%s"] = ' }))
         .pipe(gulp.dest('./output'));
 });
+
 
 gulp.task('default', ['jst']);
 ```
@@ -76,7 +87,9 @@ You can `prepend` with the `%s` option to include the `RegEx` of the `file.path`
 var gulp = require('gulp'),
     jst  = require('gulp-jst2');
 
+
 gulp.task('jst', function() {
+
     gulp.src('input/*.ejs')
         .pipe(jst({
                     prepend: 'var mySuperDuperApp["templates"]["%s"] = ',
@@ -84,6 +97,7 @@ gulp.task('jst', function() {
                   }))
         .pipe(gulp.dest('./output'));
 });
+
 
 gulp.task('default', ['jst']);
 ```
