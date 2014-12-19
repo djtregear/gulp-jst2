@@ -11,8 +11,13 @@
     "url": "git://github.com/djtregear/gulp-jst2.git"
   },
   "keywords": [
+    "gulp",
     "gulpplugin",
     "jst",
+    "gulp-jst",
+    "ejs",
+    "prepend",
+    "RegEx",
     "lodash",
     "template",
     "underscore",
