@@ -1,6 +1,6 @@
 {
   "name": "gulp-jst2",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Compile lodash templates to a JST file using gulp; allow customisation of the prepended text while optionally using a RegEx of the file.path (full path, name and extension).",
   "main": "index.js",
   "engines": {
