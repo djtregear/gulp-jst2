@@ -31,9 +31,16 @@ module.exports = function(_options) {
     if (file.isBuffer()) {
       try {
         var prependString = '';
+        var filePath;
 
         if (options.prepend) {
-          prependString = printf(options.prepend, file.path.replace(new RegExp(options.useFilePath[0]), options.useFilePath[1]));
+          if (typeof options.useFilePath === 'function') {
+            filePath = options.useFilePath(file.path);
+          } else {
+            filePath = file.path.replace(new RegExp(options.useFilePath[0]), options.useFilePath[1]);
+          }
+
+          prependString = printf(options.prepend, filePath);
         }
 
         file.contents = new Buffer(prependString + compile(file.contents.toString(), null, options).source);
