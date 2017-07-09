@@ -102,6 +102,23 @@ gulp.task('jst', function() {
 gulp.task('default', ['jst']);
 ```
 
+You can also alter the `%s` with a callback:
+
+```
+var path = require('path');
+gulp.task('jst', function() {
+  gulp.src('input/*.ejs')
+    .pipe(jst({
+      prepend: 'mySuperDuperApp["%s"] = ',
+      useFilePath: function(tplPath){
+        return tplPath.split(path.sep).pop().split('.').shift();
+      },
+    }))
+    .pipe(gulp.dest('./output'));
+});
+```
+
+
 
 Really Useful Usage
 -------------------
